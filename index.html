@@ -11,7 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>  
+        <script src="script.js"></script>
+   
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -28,19 +29,19 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">About this</a>
+                        <a class="nav-link active" aria-current="page" href="#">City</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Delhi</a></li>
-                            <li><a class="dropdown-item" href="#">Bangalore</a></li>
+                            <li><a class="dropdown-item" href="#" id="Delhi">Delhi</a></li>
+                            <li><a class="dropdown-item" href="#" id="Bangalore">Bangalore</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Seattle</a></li>
+                            <li><a class="dropdown-item" href="#" id="Seattle">Seattle</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -64,15 +65,14 @@
                             <h4 class="my-0 fw-normal">Temp</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small>
-                            </h1>
+                            
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>Temp is <span id="temp">1</span></li>
                                 <li>Min Temp is <span id="min_temp">1</span></li>
                                 <li>Max Temp is <span id="max_temp">1</span></li>
                                
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+
                         </div>
                     </div>
                 </div>
@@ -82,14 +82,13 @@
                             <h4 class="my-0 fw-normal">Wind</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small>
-                            </h1>
+                            
                             <ul class="list-unstyled mt-3 mb-4">
                                <li>Humidity is <span id="humidity">1</span></li>
                                <li>Wind speed is <span id="wind_speed">1</span></li>
                                <li>Wind degrees is <span id="wind_degrees">1</span></li>
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -99,101 +98,21 @@
                             <h4 class="my-0 fw-normal">Miscellaneous</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small>
-                            </h1>
+                           
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>Cloud_PCT is <span id="cloud_pct">1</span></li>
                                 <li>Sunrise is <span id="sunrise">1</span></li>
                                 <li>Sunset is <span id="sunset">1</span></li>
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         
-            <h2 class="display-6 text-center mb-4">Weather of other Cities</h2>
-        
-            <div class="table-responsive">
-                <table class="table text-center">
-                    <thead>
-                        <tr>
-                            <th style="width: 22%;"></th>
-                            <th style="width: 22%;">Cloud pct </th>
-                            <th style="width: 22%;">Temp</th>
-                            <th style="width: 28%;">Feels like</th>
-                            <th style="width: 22%;">Humidity</th>
-                            <th style="width: 28%;">Min temp</th>
-                            <th style="width: 28%;">Max temp</th>
-                            <th style="width: 28%;">Wind speed</th>
-                            <th style="width: 28%;">Wind degrees</th>
-                            <th style="width: 22%;">Sunrise</th>
-                            <th style="width: 22%;">Sunset</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-start">London</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-start">Seattle</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-        
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-start">Delhi</th>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-start">Patna</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                      
-                    </tbody>
-                </table>
-            </div>
+       
         </main>
     </div>
+   
 </body>
 </html>
