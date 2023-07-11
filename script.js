@@ -1,6 +1,6 @@
-// const cloud_pct = document.getElementById("cloud_pct")
- const searchbtn=document.getElementById("searchbtn")
-const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle';
+
+const searchbtn = document.getElementById("searchbtn");
+const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=';
 const options = {
     method: 'GET',
     headers: {
@@ -10,12 +10,13 @@ const options = {
 };
 
 const getWeather = (city) => {
+    console.log(city);
     heading_city.innerHTML=city
-    fetch(url, options)
+    fetch(url+city, options)
     .then(response => response.json())
-    .then(result => {
+        .then(result => {
+            console.log(url);
         console.log(result);
-        cloud_pct.innerHTML = result.cloud_pct
         temp.innerHTML = result.temp
         humidity.innerHTML = result.humidity
         min_temp.innerHTML = result.min_temp
@@ -24,6 +25,7 @@ const getWeather = (city) => {
         wind_degrees.innerHTML = result.wind_degrees
         sunrise.innerHTML = result.sunrise
         sunset.innerHTML = result.sunset
+        cloud_pct.innerHTML = result.cloud_pct;    
     })
     .catch(err => console.log(err));
 }
@@ -37,3 +39,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
         })
     }
 });
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('Delhi');
+    if (el) {
+        el.addEventListener("click", (e) => {
+            e.preventDefault()
+            getWeather('Delhi')
+        })
+    }
+});
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('Bangalore');
+    if (el) {
+        el.addEventListener("click", (e) => {
+            e.preventDefault()
+            getWeather('Bangalore')
+        })
+    }
+});
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('Seattle');
+    if (el) {
+        el.addEventListener("click", (e) => {
+            e.preventDefault()
+            getWeather('Seattle')
+        })
+    }
+});
+
